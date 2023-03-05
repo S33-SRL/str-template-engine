@@ -1,0 +1,209 @@
+<main role="main" class="container">
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">String Teamplate Engine</h1>
+      <p>This library allows you to "serialize" an untyped object into a string using a Template String as a model</p>
+      <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p> -->
+    </div>
+  </div>
+
+  <!-- <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded shadow-sm">
+    <img class="mr-3" src="/docs/4.5/assets/brand/bootstrap-outline.svg" alt="" width="48" height="48">
+    <div class="lh-100">
+      <h6 class="mb-0 text-white lh-100">Bootstrap</h6>
+      <small>Since 2011</small>
+    </div>
+  </div> -->
+
+  <div class="my-3 p-3 bg-white rounded shadow-sm">
+    <h6 class="border-bottom border-gray pb-2 mb-0">Work with base tamplate</h6>
+    <div class="media text-muted pt-3">
+      <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark">Render single field: "{{"{~property}"}}" </strong>
+        Example: "{{"{code}"}}"  |  Result: {{tmpCalc("{code}")}}
+      </p>
+    </div>
+    <div class="media text-muted pt-3">
+      <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark">Navigate fields : "{{"{~property.~sub-property}" }}"</strong>
+        Example: "{{"Type: {type.description}" }}" | Result: {{tmpCalc("Type: {type.description}")}}
+      </p>
+    </div>
+    <div class="media text-muted pt-3">
+      <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark">Render multi fields : "{{"{~property1} - {~property2}" }}"</strong>
+        Example: "{{"{code} - {shortDescription}" }}" | Result: {{tmpCalc("{code} - {shortDescription}")}}
+      </p>
+    </div>
+    <div class="media text-muted pt-3">
+      <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark">Render nasted fields : "{{"{{property1}~part-of-property2}" }}"</strong>
+        Example: "{{"Main: {mainDescription} - Nasted: {{mainDescription}Description}" }}" | Result: {{tmpCalc("Main Descripion:{mainDescription} - Description Nasted: {{mainDescription}Description}")}}
+      </p>
+    </div>
+  </div>
+
+  <div class="my-3 p-3 bg-white rounded shadow-sm">
+    <h6 class="border-bottom border-gray pb-2 mb-0">Work with array</h6>
+    <div class="media text-muted pt-3">
+      <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark">Render element of an array by index (starting from index 0): "{{"{~array[~index].~property}"}}"</strong>
+        Example: "{{"{tags[1].code}"}}" | Result: {{tmpCalc("{tags[1].code}")}}
+      </p>
+    </div>
+    <div class="media text-muted pt-3">
+      <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark">Render first element of an array: "{{"{~array[first].~property}"}}"</strong>
+        Example: "{{"{tags[first].code}"}}" | Result : {{tmpCalc("{tags[first].code}")}}
+      </p>
+    </div>
+    <div class="media text-muted pt-3">
+      <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark">Render last element of an array: "{{"{~array[last].~property}"}}"</strong>
+        Example: "{{"{tags[last].code}"}}" | Result : {{tmpCalc("{tags[last].code}")}}
+      </p>
+    </div>
+    <div class="media text-muted pt-3">
+      <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">e
+        <strong class="d-block text-gray-dark">Render first element in array (like js find): "{{"{~array[~property-key-value,~property1].~sub-property}"}}"</strong>
+        Example: {{"Sell price: {prices[customer,kind].price} - Buy price: {prices[supplier,kind].price}"}} | Result: {{tmpCalc("Sell price: {prices[customer,kind].price} - Buy price: {prices[supplier,kind].price}")}}
+      </p>
+    </div>
+  </div>
+
+  <div class="my-3 p-3 bg-white rounded shadow-sm">
+    <h6 class="border-bottom border-gray pb-2 mb-0">Data Conversion </h6>
+    <div class="media text-muted pt-3">
+      <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark">Date: "{{"{@Date|~date|~string-format}"}}"</strong>
+        Example: "{{"{@Date|2016-06-10T15:19:25.75|DD/MM/YYYY}"}}" | Result: {{tmpCalc("{@Date|2016-06-10T15:19:25.75|DD/MM/YYYY}")}} <br>
+        Example: "{{"{@Date|{creationDate}|YYYY-MM-DD HH:mm}"}}" | Result: {{tmpCalc("{@Date|{creationDate}|YYYY-MM-DD HH:mm}")}}
+      </p>
+    </div>
+    <div class="media text-muted pt-3">
+      <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark">Bool: "{{"{@Bool|~variable}"}}"</strong>
+        Example: "{{"{@Bool|}"}}" | Result: {{tmpCalc("{@Bool|}")}} <br>
+        Example: "{{"{@Bool|duck}"}}" | Result: {{tmpCalc("{@Bool|duck}")}} <br>
+        Example: "{{"{@Bool|false}"}}" | Result: {{tmpCalc("{@Bool|false}")}} <br>
+        Example: "{{"{@Bool|true}"}}" | Result: {{tmpCalc("{@Bool|true}")}} <br>
+        Example: "{{"{@Bool|undefined}"}}" | Result: {{tmpCalc("{@Bool|undefined}")}} <br>
+        Example: "{{"{@Bool|{installationComponent}}"}}" | Result: {{tmpCalc("{@Bool|{installationComponent}}")}} <br>
+      </p>
+    </div>
+    <div class="media text-muted pt-3">
+      <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark">Number: "{{"{@Number|~variable}"}}"</strong>
+        Example: "{{"{@Number|}"}}" | Result: {{tmpCalc("{@Number|}")}} <br>
+        Example: "{{"{@Number|true}"}}" | Result: {{tmpCalc("{@Number|true}")}} <br>
+        Example: "{{"{@Number|012}"}}" | Result: {{tmpCalc("{@Number|012}")}} <br>
+        Example: "{{"{@Number|23.342}"}}" | Result: {{tmpCalc("{@Number|23.342}")}} <br>
+        Example: "{{"{@Number|{leadTime}}"}}" | Result: {{tmpCalc("{@Number|{leadTime}}")}} <br>
+      </p>
+    </div>
+    <div class="media text-muted pt-3">
+      <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark">Currency: "{{"{@Currency|~number}"}}"</strong>
+        Example: "{{"{@Currency|234.56}"}}" | Result: {{tmpCalc("{@Currency|234.56}")}} <br>
+        Example: "{{"{@Currency|{prices[supplier,kind].price}}"}}" | Result: {{tmpCalc("{@Currency|{prices[supplier,kind].price}}")}}
+      </p>
+    </div>
+  </div>
+  <div class="my-3 p-3 bg-white rounded shadow-sm">
+    <h6 class="border-bottom border-gray pb-2 mb-0">Math function </h6>
+    <div class="media text-muted pt-3">
+      <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark">Not: "{{"{@Not|~variable}"}}"</strong>
+        Example: "{{"{@Not|true}"}}" | Result: {{tmpCalc("{@Not|true}")}} <br>
+        Example: "{{"{@Not|false}"}}" | Result: {{tmpCalc("{@Not|false}")}} <br>
+        Example: "{{"{@Not|{consumable}}"}}" | Result: {{tmpCalc("{@Not|{consumable}}")}} <br>
+      </p>
+    </div>
+    <div class="media text-muted pt-3">
+      <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark">Sum: "{{"{@Sum|~number1|~number1}"}}"</strong>
+        Example: "{{"{@Sum|1|2}"}}" | Result: {{tmpCalc("{@Sum|1|2}")}} <br>
+        Example: "{{"{@Sum|{packageQuantity}|2}"}}" | Result: {{tmpCalc(" {packageQuantity}+2 = {@Sum|{packageQuantity}|2}")}} <br>
+        Example: "{{"{@Sum|{packageQuantity}|{leadTime}}"}}" | Result: {{tmpCalc(" {packageQuantity}+{leadTime} = {@Sum|{packageQuantity}|{leadTime}}")}}
+      </p>
+    </div>
+    <div class="media text-muted pt-3">
+      <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark">Math ( Sum '+',Difference  '-',Product '*',Quotient '/',Remainder '%', Power '**'): "{{"{@Math|~sign|~number1|~number1}"}}"</strong>
+        Example: "{{"{@Math|*|3|2}"}}" | Result: {{tmpCalc("{@Math|*|3|2}")}} <br>
+        Example: "{{"{@Math|/|{packageQuantity}|2}"}}" | Result: {{tmpCalc("{packageQuantity}/2 = {@Math|/|{packageQuantity}|2}")}} <br>
+        Example: "{{"{@Math|%|{leadTime}|{packageQuantity}}"}}" | Result: {{tmpCalc(" {leadTime} % {packageQuantity} = {@Math|%|{leadTime}|{packageQuantity}}")}} <br>
+      </p>
+    </div>
+  </div>
+  <div class="my-3 p-3 bg-white rounded shadow-sm">
+    <h6 class="border-bottom border-gray pb-2 mb-0">Comparisons </h6>
+    <div class="media text-muted pt-3">
+      <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark">IsNull (2 parameter): "{{"{@IsNull|~variable-nullable|~variable-alternative}"}}"</strong>
+        Example: "{{"{@IsNull||alternative}"}}" | Result: {{tmpCalc("{@IsNull||alternative}")}} <br>
+        Example: "{{"{@IsNull|exist|alternative}"}}" | Result: {{tmpCalc("{@IsNull|exist|alternative}")}} <br>
+        Example: "{{"{@IsNull|{parent}|alternative}"}}" | Result: {{tmpCalc("{@IsNull|{parent}|alternative}")}}<br>
+        Example: "{{"{@IsNull|{packageQuantity}|alternative}"}}" | Result: {{tmpCalc("{@IsNull|{packageQuantity}|alternative}")}}
+        <strong class="d-block text-gray-dark">IsNull (3 parameter): "{{"{@IsNull|~variable-nullable|~if-not-null|~if-null}"}}"</strong>
+        Example: "{{"{@IsNull||is null|is not null}"}}" | Result: {{tmpCalc("{@IsNull||is not null|is null}")}} <br>
+        Example: "{{"{@IsNull|1|is null|is not null}"}}" | Result: {{tmpCalc("{@IsNull|1|is not null|is null}")}} <br>
+        Example: "{{"{@IsNull|{parent}|is null|is not null}"}}" | Result: {{tmpCalc("{@IsNull|{parent}|is not null|is null}")}} <br>
+        Example: "{{"{@IsNull|{packageQuantity}|is null|is not null}"}}" | Result: {{tmpCalc("{@IsNull|{packageQuantity}|is not null|is null}")}}
+      </p>
+    </div>
+    <div class="media text-muted pt-3">
+      <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark">If (eval-string use js eval): "{{"{@If|~eval-string|~true-case|~false-case}"}}"</strong>
+        Example: "{{"{@If|'true'=='false'|true case|false case}"}}" | Result: {{tmpCalc("{@If|'true'=='false'|true case|false case}")}} <br>
+        Example: "{{"{@If|1==1|true case|false case}"}}" | Result: {{tmpCalc("{@If|1==1|true case|false case}")}} <br>
+        Example: "{{"{@If|{packageQuantity}>9|{packageQuantity} is bigger then 9|{packageQuantity} isn't bigger then 9}"}}" | Result: {{tmpCalc("{@If|{packageQuantity}>9|{packageQuantity} is bigger then 9|{packageQuantity} isn't bigger then 9}")}} <br>
+        Example: "{{"{@If|{reorderPoint}>9|{reorderPoint} is bigger then 9|{reorderPoint} isn't bigger then 9}"}}" | Result: {{tmpCalc("{@If|{reorderPoint}>9|{reorderPoint} is bigger then 9|{reorderPoint} isn't bigger then 9}")}}
+      </p>
+    </div>
+    <div class="media text-muted pt-3">
+      <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark">Switch : "{{"{@Switch|~expression|~case-string-1:~value-case|~case-string-2:~value-case|...|~(default:)~value-default}"}}"</strong>
+        Example: "{{"{@Switch|b|a:case a|b:case b|case default}"}}" | Result: {{tmpCalc("{@Switch|b|a:case a|b:case b|case default}")}} <br>
+        Example: "{{"{@Switch|A|a:case a|b:case b|case default}"}}" | Result: {{tmpCalc("{@Switch|k|a:case a|b:case b|case default}")}} <br>
+        Example: "{{"{@Switch|A|a:case a|A:case A|case default}"}}" | Result: {{tmpCalc("{@Switch|A|a:case a|A:case A|case default}")}} <br>
+        <strong class="d-block text-gray-dark">SwitchInsensitive : "{{"{@SwitchInsensitive|~expression|~case-string-1:~value-case|~case-string-2:~value-case|...|~(default:)~value-default}"}}"</strong>
+        Example: "{{"{@SwitchInsensitive|A|a:case a|B:case B|case default}"}}" | Result: {{tmpCalc("{@SwitchInsensitive|A|a:case a|B:case B|case default}")}} <br>
+      </p>
+    </div>
+    <div class="media text-muted pt-3">
+      <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"></rect><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark">Contains (3 parameter): "{{"{@Contains|~variable|~string-contained|~value-is-contained|~value-is-not-contained}"}}"</strong>
+        Example: "{{"{@Contains|image.jpg|.jpg| contain .jpg }"}}" | Result: {{tmpCalc("{@Contains|image.jpg|.jpg| contain .jpg }")}} <br>
+        Example: "{{"{@Contains|image/jpg|png|contain png }"}}" | Result: {{tmpCalc("{@Contains|image/jpg|png|contain png }")}} <br>
+        Example: "{{"{@Contains|{productImage}|.png| {productImage} is png image }"}}" | Result: {{tmpCalc("{@Contains|{productImage}|.png| {productImage} is png image }")}} <br>
+        Example: "{{"{@Contains|{productImage}|.jpg| {productImage} is jpg image }"}}" | Result: {{tmpCalc("{@Contains|{productImage}|.jpg| {productImage} is jpg image }")}} <br>
+        <strong class="d-block text-gray-dark">Contains (4 parameter): "{{"{@Contains|~variable|~string-contained|~value-if-contain|~value-if-not-contain}"}}"</strong>
+        Example: "{{"{@Contains|image.jpg|.jpg| contain .jpg |not contain .jpg }"}}" | Result: {{tmpCalc("{@Contains|image.jpg|.jpg| contain .jpg |not contain .jpg }")}} <br>
+        Example: "{{"{@Contains|image/jpg|png|contain png|not contain png}"}}" | Result: {{tmpCalc("{@Contains|image/jpg|png|contain png|not contain png}")}} <br>
+        Example: "{{"{@Contains|{productImage}|.png| {productImage} is png image | {productImage} isn't png image}"}}" | Result: {{tmpCalc("{@Contains|image/jpg|png|contain png|not contain png}")}} <br>
+
+      </p>
+    </div>
+  </div>
+</main>
